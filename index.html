@@ -1,602 +1,529 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>complete responsive tour and travel agency website design tutorial</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Pizza Shop STEM Academy</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- font awesome cdn link  -->
-<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">-->
-    <link rel="stylesheet" href="D:/now/fars/fa/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-    
+   
 <!-- header section starts  -->
 
-<header>
+<header class="header">
 
-    <div id="menu-bar" class="fas fa-bars"></div>
+   <section class="flex">
 
-    <a href="#" class="logo"><span>T</span>ravel</a>
+      <a href="#home" class="logo">Pizza.</a>
 
-    <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#book">book</a>
-        <a href="#packages">packages</a>
-        <a href="#services">services</a>
-        <a href="#gallery">gallery</a>
-        <a href="#review">review</a>
-        <a href="#contact">contact</a>
-    </nav>
+      <nav class="navbar">
+         <a href="#home">Home</a>
+         <a href="#about">About</a>
+         <a href="#menu">Menu</a>
+         <a href="#order">Order</a>
+         <a href="#faq">Faq</a>
+      </nav>
 
-    <div class="icons">
-        <i class="fas fa-search" id="search-btn"></i>
-        <i class="fas fa-user" id="login-btn"></i>
-    </div>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="order-btn" class="fas fa-box"></div>
+         <div id="cart-btn" class="fas fa-shopping-cart"><span>(4)</span></div>
+      </div>
 
-    <form action="" class="search-bar-container">
-        <input type="search" id="search-bar" placeholder="search here...">
-        <label for="search-bar" class="fas fa-search"></label>
-    </form>
+   </section>
 
 </header>
 
 <!-- header section ends -->
 
-<!-- login form container  -->
+<div class="user-account">
 
-<div class="login-form-container">
+   <section>
 
-    <i class="fas fa-times" id="form-close"></i>
+      <div id="close-account"><span>close</span></div>
 
-    <form action="">
-        <h3>login</h3>
-        <input type="email" class="box" placeholder="enter your email">
-        <input type="password" class="box" placeholder="enter your password">
-        <input type="submit" value="login now" class="btn">
-        <input type="checkbox" id="remember">
-        <label for="remember">remember me</label>
-        <p>forget password? <a href="#">click here</a></p>
-        <p>don't have and account? <a href="#">register now</a></p>
-    </form>
+      <div class="user">
+         <p><span>you are not logged in now!</span></p>
+      </div>
+
+      <div class="display-orders">
+         <p>pizza-1 <span>( $3/- x 2 )</span></p>
+         <p>pizza 03 <span>( $2/- x 1 )</span></p>
+         <p>pizza 06 <span>( $4/- x 4 )</span></p>
+         <p>pizza 07 <span>( $2/- x 1 )</span></p>
+      </div>
+
+      <div class="flex">
+
+         <form action="" method="post">
+            <h3>login now</h3>
+            <input type="email" name="email" required class="box" placeholder="enter your email" maxlength="50">
+            <input type="password" name="pass" required class="box" placeholder="enter your password" maxlength="20">
+            <input type="submit" value="login now" name="login" class="btn">
+         </form>
+
+         <form action="" method="post">
+            <h3>register now</h3>
+            <input type="text" name="name" required class="box" placeholder="enter your name" maxlength="20">
+            <input type="email" name="email" required class="box" placeholder="enter your email" maxlength="50">
+            <input type="password" name="pass" required class="box" placeholder="enter your password" maxlength="20">
+            <input type="password" name="cpass" required class="box" placeholder="confirm your password" maxlength="20">
+            <input type="submit" value="register now" name="register" class="btn">
+         </form>
+
+      </div>
+
+   </section>
 
 </div>
 
-<!-- home section starts  -->
+<div class="my-orders">
 
-<section class="home" id="home">
+   <section>
 
-    <div class="content">
-        <h3>Bek IT Education</h3>
-        <p>dicover new places with us, Travel with us</p>
-        <a href="#" class="btn">discover more</a>
-    </div>
+      <div id="close-orders"><span>close</span></div>
 
-    <div class="controls">
-        <span class="vid-btn active" data-src="images/vid-1.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-2.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-5.mp4"></span>
-    </div>
+      <h3 class="title"> my orders </h3>
 
-    <div class="video-container">
-        <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
-    </div>
+      <div class="box">
+         <p>placed on : <span>06/04/2022</span> </p>
+         <p>name : <span>shaikh anas</span> </p>
+         <p>number : <span>1234567890</span></p>
+         <p>address : <span>flat no. 123, bulding no. 2, jogeshwari, mumbai, india - 400104</span></p>
+         <p>payment method : <span>cash on delivery</span></p>
+         <p>your orders : <span>pizza 01 $3/- x 2, pizza 03 $2/- x 1, pizza 06 $4/- x 4, pizza 07, $2/- x 1</span></p>
+         <p>total price : <span>$11/-</span></p>
+         <p>payment status : <span style="color: var(--red);">pending</span> </p>
+      </div>
+
+      <div class="box">
+         <p>placed on : <span>06/04/2022</span> </p>
+         <p>name : <span>shaikh anas</span> </p>
+         <p>number : <span>1234567890</span></p>
+         <p>address : <span>flat no. 123, bulding no. 2, jogeshwari, mumbai, india - 400104</span></p>
+         <p>payment method : <span>cash on delivery</span></p>
+         <p>your orders : <span>pizza 01 $3/- x 2, pizza 03 $2/- x 1, pizza 06 $4/- x 4, pizza 07, $2/- x 1</span></p>
+         <p>total price : <span>$11/-</span></p>
+         <p>payment status : <span style="color: var(--red);">pending</span> </p>
+      </div>
+
+   </section>
+
+</div>
+
+<div class="shopping-cart">
+
+   <section>
+
+      <div id="close-cart"><span>close</span></div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-1.jpg" alt="">
+         <div class="content">
+            <p>pizza-1 <span>( $3/- x 2 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-3.jpg" alt="">
+         <div class="content">
+            <p>pizza-3 <span>( $2/- x 1 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-6.jpg" alt="">
+         <div class="content">
+            <p>pizza-6 <span>( $4/- x 2 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-7.jpg" alt="">
+         <div class="content">
+            <p>pizza-7 <span>( $2/- x 1 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <a href="#order" class="btn">order now</a>
+
+   </section>
+
+</div>
+
+<div class="home-bg">
+
+   <section class="home" id="home">
+
+      <div class="slide-container">
+
+         <div class="slide active">
+            <div class="image">
+               <img src="images/home-img-1.png" alt="">
+            </div>
+            <div class="content">
+               <h3>homemade Pepperoni Pizza</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+         <div class="slide">
+            <div class="image">
+               <img src="images/home-img-2.png" alt="">
+            </div>
+            <div class="content">
+               <h3>Pizza With Mushrooms</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+         <div class="slide">
+            <div class="image">
+               <img src="images/home-img-3.png" alt="">
+            </div>
+            <div class="content">
+               <h3>Mascarpone And Mushrooms</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+      </div>
+
+   </section>
+
+</div>
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <h1 class="heading">About us</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/about-1.svg" alt="">
+         <h3>Made with love</h3>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quae amet beatae magni numquam facere sit. Tempora vel laboriosam repudiandae!</p>
+         <a href="#menu" class="btn">Our menu</a>
+      </div>
+
+      <div class="box">
+         <img src="images/about-2.svg" alt="">
+         <h3>30 minutes delivery</h3>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quae amet beatae magni numquam facere sit. Tempora vel laboriosam repudiandae!</p>
+         <a href="#menu" class="btn">our menu</a>
+      </div>
+
+      <div class="box">
+         <img src="images/about-3.svg" alt="">
+         <h3>share with freinds</h3>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quae amet beatae magni numquam facere sit. Tempora vel laboriosam repudiandae!</p>
+         <a href="#menu" class="btn">our menu</a>
+      </div>
+
+   </div>
 
 </section>
 
-<!-- home section ends -->
+<!-- about section ends -->
 
-<!-- book section starts  -->
+<!-- menu section starts  -->
 
-<section class="book" id="book">
+<section id="menu" class="menu">
 
-    <h1 class="heading">
-        <span>b</span>
-        <span>o</span>
-        <span>o</span>
-        <span>k</span>
-        <span class="space"></span>
-        <span>n</span>
-        <span>o</span>
-        <span>w</span>
-    </h1>
+   <h1 class="heading">our menu</h1>
 
-    <div class="row">
+   <div class="box-container">
 
-        <div class="image">
-            <img src="bekit.jpg" class="bekit" alt="">
-        </div>
+      <div class="box">
+         <div class="price">$<span>2</span>/-</div>
+         <img src="images/pizza-1.jpg" alt="">
+         <div class="name">pizza 1</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-        <form action="">
-            <div class="inputBox">
-                <h3>where to</h3>
-                <input type="text" placeholder="place name">
-            </div>
-            <div class="inputBox">
-                <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
-            </div>
-            <div class="inputBox">
-                <h3>arrivals</h3>
-                <input type="date">
-            </div>
-            <div class="inputBox">
-                <h3>leaving</h3>
-                <input type="date">
-            </div>
-            <input type="submit" class="btn" value="book now">
-        </form>
+      <div class="box">
+         <div class="price">$<span>4</span>/-</div>
+         <img src="images/pizza-2.jpg" alt="">
+         <div class="name">pizza 2</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-    </div>
+      <div class="box">
+         <div class="price">$<span>2</span>/-</div>
+         <img src="images/pizza-3.jpg" alt="">
+         <div class="name">pizza 3</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-</section>
+      <div class="box">
+         <div class="price">$<span>3</span>/-</div>
+         <img src="images/pizza-4.jpg" alt="">
+         <div class="name">pizza 4</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-<!-- book section ends -->
+      <div class="box">
+         <div class="price">$<span>2</span>/-</div>
+         <img src="images/pizza-5.jpg" alt="">
+         <div class="name">pizza 5</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-<!-- packages section starts  -->
+      <div class="box">
+         <div class="price">$<span>4</span>/-</div>
+         <img src="images/pizza-6.jpg" alt="">
+         <div class="name">pizza 6</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-<section class="packages" id="packages">
+      <div class="box">
+         <div class="price">$<span>2</span>/-</div>
+         <img src="images/pizza-7.jpg" alt="">
+         <div class="name">pizza 7</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-    <h1 class="heading">
-        <span>p</span>
-        <span>a</span>
-        <span>c</span>
-        <span>k</span>
-        <span>a</span>
-        <span>g</span>
-        <span>e</span>
-        <span>s</span>
-    </h1>
+      <div class="box">
+         <div class="price">$<span>3</span>/-</div>
+         <img src="images/pizza-8.jpg" alt="">
+         <div class="name">pizza 8</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-    <div class="box-container">
+      <div class="box">
+         <div class="price">$<span>4</span>/-</div>
+         <img src="images/pizza-9.jpg" alt="">
+         <div class="name">pizza 9</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
 
-        <div class="box">
-            <img src="images/p-1.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> mumbai </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="#" class="btn">book now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-2.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> hawaii </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="#" class="btn">book now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-3.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> sydney </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="#" class="btn">book now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-4.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="#" class="btn">book now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-5.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> tokyo </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="#" class="btn">book now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-6.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> eypt </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="#" class="btn">book now</a>
-            </div>
-        </div>
-
-    </div>
+   </div>
 
 </section>
 
-<!-- packages section ends -->
+<!-- menu section ends -->
 
-<!-- services section starts  -->
+<!-- order section starts  -->
 
-<section class="services" id="services">
+<section class="order" id="order">
 
-    <h1 class="heading">
-        <span>s</span>
-        <span>e</span>
-        <span>r</span>
-        <span>v</span>
-        <span>i</span>
-        <span>c</span>
-        <span>e</span>
-        <span>s</span>
-    </h1>
+   <h1 class="heading">order now</h1>
 
-    <div class="box-container">
+   <form action="" method="post">
 
-        <div class="box">
-            <i class="fas fa-hotel"></i>
-            <h3>affordable hotels</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-utensils"></i>
-            <h3>food and drinks</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-bullhorn"></i>
-            <h3>safty guide</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-globe-asia"></i>
-            <h3>around the world</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-plane"></i>
-            <h3>fastest travel</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-hiking"></i>
-            <h3>adventures</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
+      <div class="display-orders">
+         <p>pizza-1 <span>( $3/- x 2 )</span></p>
+         <p>pizza 03 <span>( $2/- x 1 )</span></p>
+         <p>pizza 06 <span>( $4/- x 4 )</span></p>
+         <p>pizza 07 <span>( $2/- x 1 )</span></p>
+      </div>
 
-    </div>
+      <div class="flex">
+         <div class="inputBox">
+            <span>your name :</span>
+            <input type="text" name="name" class="box" required placeholder="enter your name" maxlength="20">
+         </div>
+         <div class="inputBox">
+            <span>your number :</span>
+            <input type="number" name="number" class="box" required placeholder="enter your number" min="0">
+         </div>
+         <div class="inputBox">
+            <span>payment method</span>
+            <select name="method" class="box">
+               <option value="cash on delivery">cash on delivery</option>
+               <option value="credit card">credit card</option>
+               <option value="paytm">paytm</option>
+               <option value="paypal">paypal</option>
+            </select>
+         </div>
+         <div class="inputBox">
+            <span>address line 01 :</span>
+            <input type="text" name="flat" class="box" required placeholder="e.g. flat no." maxlength="50">
+         </div>
+         <div class="inputBox">
+            <span>address line 02 :</span>
+            <input type="text" name="street" class="box" required placeholder="e.g. street name." maxlength="50">
+         </div>
+         <div class="inputBox">
+            <span>pin code :</span>
+            <input type="number" name="pin_code" class="box" required placeholder="e.g. 123456" min="0">
+         </div>
+      </div>
 
-</section>
+      <input type="submit" value="order now" class="btn" name="order">
 
-<!-- services section ends -->
-
-<!-- gallery section starts  -->
-
-<section class="gallery" id="gallery">
-
-    <h1 class="heading">
-        <span>g</span>
-        <span>a</span>
-        <span>l</span>
-        <span>l</span>
-        <span>e</span>
-        <span>r</span>
-        <span>y</span>
-    </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <img src="images/g-1.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-2.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-3.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-4.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-5.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-6.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-7.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-8.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-9.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-
-    </div>
+   </form>
 
 </section>
 
-<!-- gallery section ends -->
+<!-- order section ends -->
 
-<!-- review section starts  -->
+<!-- faq section starts  -->
 
-<section class="review" id="review">
+<section class="faq" id="faq">
 
-    <h1 class="heading">
-        <span>r</span>
-        <span>e</span>
-        <span>v</span>
-        <span>i</span>
-        <span>e</span>
-        <span>w</span>
-    </h1>
+   <h1 class="heading">FAQ</h1>
 
-    <div class="swiper-container review-slider">
+   <div class="accordion-container">
 
-        <div class="swiper-wrapper">
+      <div class="accordion active">
+         <div class="accordion-heading">
+            <span>how does it work?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quas. Quidem minima veniam accusantium maxime, doloremque iusto deleniti veritatis quos.
+         </p>
+      </div>
 
-            <div class="swiper-slide">
-                <div class="box">
-                    <img src="images/person2.jpg" alt="">
-                    <h3>Alice Havvai</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box">
-                    <img src="images/person3.jpg" alt="">
-                    <h3>john deo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box">
-                    <img src="images/person1.jpg" alt="">
-                    <h3>Janne Alice</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box">
-                    <img src="images/person4.jpg" alt="">
-                    <h3>Jack little</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-            </div>
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>how long does it take for delivery?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quas. Quidem minima veniam accusantium maxime, doloremque iusto deleniti veritatis quos.
+         </p>
+      </div>
 
-        </div>
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>can I order for huge parties?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quas. Quidem minima veniam accusantium maxime, doloremque iusto deleniti veritatis quos.
+         </p>
+      </div>
 
-    </div>
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>how much protein it contains?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quas. Quidem minima veniam accusantium maxime, doloremque iusto deleniti veritatis quos.
+         </p>
+      </div>
+
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>is it cooked with oil?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quas. Quidem minima veniam accusantium maxime, doloremque iusto deleniti veritatis quos.
+         </p>
+      </div>
+
+   </div>
 
 </section>
 
-<!-- review section ends -->
+<!-- faq section ends -->
 
-<!-- contact section starts  -->
-
-<section class="contact" id="contact">
-    
-    <h1 class="heading">
-        <span>c</span>
-        <span>o</span>
-        <span>n</span>
-        <span>t</span>
-        <span>a</span>
-        <span>c</span>
-        <span>t</span>
-    </h1>
-
-    <div class="row">
-
-        <div class="image">
-            <img src="images/contact-img.svg" alt="">
-        </div>
-
-        <form action="">
-            <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
-            </div>
-            <div class="inputBox">
-                <input type="number" placeholder="number">
-                <input type="text" placeholder="subject">
-            </div>
-            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-            <input type="submit" class="btn" value="send message">
-        </form>
-
-    </div>
-    
-</section>
-
-<!-- contact section ends -->
-
-<!-- brand section  -->
-<section class="brand-container">
-
-    <div class="swiper-container brand-slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
-        </div>
-    </div>
-
-</section>
-
-<!-- footer section  -->
+<!-- footer section starts  -->
 
 <section class="footer">
 
-    <div class="box-container">
+   <div class="box-container">
 
-        <div class="box">
-            <h3>about us</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas magni pariatur est accusantium voluptas enim nemo facilis sit debitis.</p>
-        </div>
-        <div class="box">
-            <h3>branch locations</h3>
-            <a href="#">Uzbekistan</a>
-            <a href="#">USA</a>
-            <a href="#">Japan</a>
-            <a href="#">Seul</a>
-            <a href="#">Canada</a>
-            <a href="#">Poland</a>
+      <div class="box">
+         <i class="fas fa-phone"></i>
+         <h3>phone number</h3>
+         <p>+998-93-267-67-67</p>
+         <p>+998-99-618-71-71</p>
+      </div>
 
-        </div>
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="#">home</a>
-            <a href="#">book</a>
-            <a href="#">packages</a>
-            <a href="#">services</a>
-            <a href="#">gallery</a>
-            <a href="#">review</a>
-            <a href="#">contact</a>
-        </div>
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#">facebook</a>
-            <a href="#">instagram</a>
-            <a href="#">twitter</a>
-            <a href="#">linkedin</a>
-        </div>
+      <div class="box">
+         <i class="fas fa-map-marker-alt"></i>
+         <h3>Our address</h3>
+         <p>Tashkent Uzbekistan Namangan -160100</p>
+      </div>
 
-    </div>
+      <div class="box">
+         <i class="fas fa-clock"></i>
+         <h3>opening hours</h3>
+         <p>00:09am to 00:10pm</p>
+      </div>
 
-    <h1 class="credit"> created by <span> Bek IT Education</span> | all rights reserved! </h1>
+      <div class="box">
+         <i class="fas fa-envelope"></i>
+         <h3>email address</h3>
+         <p>foodspace@gmail.com</p>
+         <p>foodspace2@gmail.com</p>
+      </div>
+
+   </div>
+
+   <div class="credit">
+      &copy; powerd  by <span>MR. STE ACADEMY</span> | all rights reserved!
+   </div>
 
 </section>
 
+<!-- footer section ends -->
 
 
 
@@ -612,16 +539,12 @@
 
 
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
 
 <!-- custom js file link  -->
-<script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
-
- <script> jQuery('#waterdrop').raindrops({color:'#1c1f2f', canvasHeight:150, density: 0.1, frequency: 20});
-</script>  
+<script src="js/script.js"></script>
 
 </body>
 </html>
